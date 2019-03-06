@@ -1,4 +1,4 @@
-package com.examples.core.java;
+package com.examples.java.core;
 
 /**
  * Contains core java language constructs overview
@@ -52,7 +52,7 @@ public class HelloWorld {
 
 		// Non-primitive Data Types => Arrays, String, Object
 		
-		String msg = "Hello World";
+		String helloWorldMsg = "Hello World";
 
 		// Variable Types
 		// 1) Primitive Variable
