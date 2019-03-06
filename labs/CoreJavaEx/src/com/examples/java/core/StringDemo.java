@@ -9,7 +9,7 @@ public class StringDemo {
 			
 		System.out.println(msg1 == msg2);
 		System.out.println(msg1.length());
-		System.out.println(msg1.charAt(5));
+		System.out.println(msg1.charAt(5));		
 	}
 
 }

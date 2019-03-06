@@ -46,6 +46,16 @@ public abstract class Person {
 		this.gender = gender;
 	}
 	
-	public abstract void printDetails();
+	protected void printDetails() {
+		System.out.println("Print person details");		
+	}
+	
+	protected void printDetails(boolean dontPrintAge) {
+		System.out.println("Print Person details without age");
+	}	
+	
+	public static void sayHello() {
+		System.out.println("Hello Person");
+	};
 
 }

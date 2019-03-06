@@ -3,7 +3,7 @@ package com.examples.java.oops;
 /**
  * Models Employee object
  */
-public class Employee extends Person {
+public class Employee extends Person implements Appraisable {
 	
 	// access modifiers
 	// private, public, protected, default
@@ -26,6 +26,7 @@ public class Employee extends Person {
 		super(name, age, gender);
 		this.empId = empId;
 		this.designation = designation;
+		this.department = department;
 		this.salary = salary;
 	}
 	
@@ -61,9 +62,10 @@ public class Employee extends Person {
 		this.salary = salary;
 	}
 	
-	
-	public void printDetails() {
+	@Override
+	protected void printDetails() {
 		// print employee details
+		System.out.println("Print employee details");
 		System.out.println("EmpId: " + this.getEmpId());
 		System.out.println("Name: " + this.getName());
 		System.out.println("Age: " + this.getAge());
@@ -71,5 +73,16 @@ public class Employee extends Person {
 		System.out.println("Designation: " + this.getDesignation());
 		System.out.println("Department: " + this.getDepartment());
 		System.out.println("Salary: " + this.getSalary());
-	}	
+		System.out.println();
+	}
+	
+	public static void sayHello()
+	{
+		System.out.println("Hello Employee \n");
+	}
+
+	@Override
+	public void appraise() {
+		System.out.println("Employee Appriased \n");
+	}
 }
