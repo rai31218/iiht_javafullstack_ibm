@@ -3,7 +3,7 @@ package com.examples.java.oops;
 /**
  * Models Employee object
  */
-public class Employee extends Person implements Appraisable {
+public class Employee extends Person implements Appraisable, Comparable {
 	
 	// access modifiers
 	// private, public, protected, default
@@ -84,5 +84,33 @@ public class Employee extends Person implements Appraisable {
 	@Override
 	public void appraise() {
 		System.out.println("Employee Appriased \n");
+	}
+	
+	@Override
+	public int hashCode() {
+		return this.getEmpId() % 5;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof Employee)
+		{
+			return this.getEmpId() == ((Employee) obj).getEmpId(); 
+		}
+		return false; 
+	}
+	
+	public String toString()
+	{
+		return String.valueOf(this.empId) + " " + String.valueOf(this.getName() + " " + String.valueOf(this.getAge()));
+	}
+
+	@Override
+	public int compareTo(Object o) {
+		if(o instanceof Employee)
+		{		
+			return this.getName().compareTo(((Employee) o).getName());		
+		}
+		return 0;
 	}
 }
