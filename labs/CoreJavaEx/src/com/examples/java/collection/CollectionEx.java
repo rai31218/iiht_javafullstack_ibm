@@ -2,6 +2,7 @@ package com.examples.java.collection;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Hashtable;
@@ -18,8 +19,6 @@ import java.util.SortedSet;
 import java.util.TreeMap;
 import java.util.TreeSet;
 import java.util.Vector;
-
-import com.examples.java.oops.Employee;
 
 /**
  * Basic collection examples
@@ -56,14 +55,14 @@ public class CollectionEx {
 		// Ordered list of items. Underlying data structure is Doubly LinkedList.
 		// Better for frequent insertions and deletions.
 		LinkedList countriesLinkedList = new LinkedList();
-		countriesLinkedList.add(10);
+		countriesLinkedList.add("India");
 		countriesLinkedList.add("China");
 		countriesLinkedList.add("USA");
-		countriesLinkedList.add(20);
+		countriesLinkedList.add("UK");
 		countriesLinkedList.add("India");
 		
 		System.out.println("\nLinkedList Output..");
-		displayAll(countriesLinkedList);
+		displayListEntries(countriesLinkedList);
 		
 		// Prints LinkedList entries using ListIterator
 		//displayListEntries(countriesLinkedList);
@@ -114,6 +113,9 @@ public class CollectionEx {
 		countriesHashMap.put("BRZ", "Brazil");
 		countriesHashMap.put("USA", "USA");
 		countriesHashMap.put("IND", "India");
+		countriesHashMap.put("", "India");
+		countriesHashMap.put(null, "India");
+		countriesHashMap.put(null, "UK");
 		// Prints HashMap entries
 		System.out.println("\nHashMap Output..");
 		displayMapEntries(countriesHashMap.entrySet());
@@ -133,6 +135,7 @@ public class CollectionEx {
 		displayAll(countriesHashTable.keySet());
 		displayAll(countriesHashTable.values());		
 
+		
 		// Sorted map of items by keys. Better for read with sorting requirement.
 		SortedMap countriesTreeMap = new TreeMap();
 		countriesTreeMap.put("IND", "India");
@@ -146,6 +149,7 @@ public class CollectionEx {
 		displayAll(countriesTreeMap.keySet());
 		displayAll(countriesTreeMap.values());
 
+		
 		// Ordered map of items by keys. Better for read with ordering requirement.
 		LinkedHashMap countriesLnkHashMap = new LinkedHashMap();
 		countriesLnkHashMap.put("IND", "India");
@@ -157,7 +161,8 @@ public class CollectionEx {
 		System.out.println("\nLinkedHashMap Output..");
 		displayMapEntries(countriesLnkHashMap.entrySet());
 		displayAll(countriesLnkHashMap.keySet());
-		displayAll(countriesLnkHashMap.values());		
+		displayAll(countriesLnkHashMap.values());	
+		
 	}
 		
 
@@ -166,6 +171,7 @@ public class CollectionEx {
 		for(Object element: col) {
 			System.out.println(element);
 		}
+		System.out.println();
 	}
 
 	
