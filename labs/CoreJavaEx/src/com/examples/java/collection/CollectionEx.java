@@ -23,12 +23,14 @@ import java.util.Vector;
 /**
  * Basic collection examples
  */
+@SuppressWarnings({"rawtypes", "unchecked"})
 public class CollectionEx {
 
 	public static void main(String[] args) {
 
 		// Ordered list of items. Synchronized. Underlying data structure is Array.
 		// Slower compare to ArrayList.
+		
 		List countriesVec = new Vector();
 		countriesVec.add("India");
 		countriesVec.add("China");
