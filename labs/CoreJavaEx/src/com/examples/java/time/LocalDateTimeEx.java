@@ -1,8 +1,8 @@
 package com.examples.java.time;
 
 import java.time.LocalDate;
-import java.time.LocalTime;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.time.Month;
 
 public class LocalDateTimeEx {
@@ -13,6 +13,7 @@ public class LocalDateTimeEx {
    }
 	
    public void testLocalDateTime() {
+	   
       // Get the current date and time
       LocalDateTime currentTime = LocalDateTime.now();
       System.out.println("Current DateTime: " + currentTime);
@@ -40,5 +41,6 @@ public class LocalDateTimeEx {
       //parse a string
       LocalTime date5 = LocalTime.parse("20:15:30");
       System.out.println("date5: " + date5);
+      
    }
 }
