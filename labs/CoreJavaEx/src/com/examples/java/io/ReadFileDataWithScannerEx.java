@@ -9,7 +9,7 @@ public class ReadFileDataWithScannerEx {
         Scanner s = null;
  
         try {
-            s = new Scanner(new BufferedReader(new FileReader("D:\\\\Temp\\\\output.txt")));
+            s = new Scanner(new BufferedReader(new InputStreamReader(new FileInputStream("D:\\\\Temp\\\\output.txt"))));
             
             while (s.hasNextLine()) {
                 System.out.println(s.nextLine());

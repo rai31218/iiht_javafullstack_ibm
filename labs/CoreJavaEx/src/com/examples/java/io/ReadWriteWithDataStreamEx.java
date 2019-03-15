@@ -26,12 +26,13 @@ public class ReadWriteWithDataStreamEx {
 			for (int i = 0; i < prices.length; i++) {
 				out.writeDouble(prices[i]);
 				out.writeInt(units[i]);
-				out.writeUTF(descs[i]);
+				out.writeUTF(descs[i]);				
 			}
 		} finally {
 			out.close();
 		}
 
+		
 		DataInputStream in = null;
 		double total = 0.0;
 		try {
@@ -55,5 +56,6 @@ public class ReadWriteWithDataStreamEx {
 		} finally {
 			in.close();
 		}
+		
 	}
 }

@@ -11,12 +11,14 @@ public class CopyFileWithCharBufferedStreamEx {
          in = new BufferedReader(new FileReader("D:\\Temp\\input.txt"));
          out = new PrintWriter(new FileWriter("D:\\Temp\\output.txt"));
          
-         String line = null;
+         String line = null;         
          while ((line = in.readLine()) != null) {
         	System.out.println(line);
             out.write(line);
+            out.write("\n");
          }
          
+         out.flush();
          System.out.println("\n" + "File copied successfully.");
          
       }finally {

@@ -23,7 +23,8 @@ public class DeserializeEx {
       System.out.println("Deserialized Employee...");
       System.out.println("Name: " + e.name);
       System.out.println("Address: " + e.address);
-      System.out.println("SSN: " + e.SSN);
+      System.out.println("UID: " + e.uid);
       System.out.println("Id: " + e.id);
+      System.out.println("Skill: " + e.skills);
    }
 }

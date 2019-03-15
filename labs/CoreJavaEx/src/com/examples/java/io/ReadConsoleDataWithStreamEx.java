@@ -5,16 +5,17 @@ import java.io.*;
 public class ReadConsoleDataWithStreamEx {
 
 	public static void main(String args[]) throws IOException {
-		InputStreamReader cin = null;		
+		BufferedReader cin = null;		
 
 		try {
-			cin = new InputStreamReader(System.in);
+			
+			cin = new BufferedReader(new InputStreamReader(System.in));
 			System.out.println("Enter characters, 'q' to quit.");
-			char c;
+			String line;
 			do {
-				c = (char) cin.read();
-				System.out.println(c);
-			} while (c != 'q');
+				line = (String) cin.readLine();
+				System.out.println(line);
+			} while (line != "q");
 		} finally {
 			if (cin != null) {
 				cin.close();
