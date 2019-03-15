@@ -14,6 +14,7 @@ public class Eg05 {
 		Buffer b = new Buffer();
 		Consumer c = new Consumer(b);
 		Producer p = new Producer(b);
+		
 		Thread t1 = new Thread(c);
 		Thread t2 = new Thread(p);
 		t1.start();

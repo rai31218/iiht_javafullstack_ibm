@@ -26,8 +26,11 @@ public class Eg14 {
 	public static void main(String[] args) {
 		Eg14 e = new Eg14();
 		Thread t1 = e.new CpuInternsiveJob();
-//		t1.setDaemon(true);
+		// uncomment below statement to run as daemon thread
+		// thread will run in background with low priority
+		// t1.setDaemon(true);	
 		t1.start();
+		System.out.println("Daemon thread started...");
 
 	}
 }

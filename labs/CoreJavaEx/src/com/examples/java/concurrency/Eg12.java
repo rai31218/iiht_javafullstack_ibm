@@ -16,7 +16,7 @@ public class Eg12 {
 		public void run() {
 			System.out.println(Thread.currentThread().getName() + " starting >>>");
 			System.out.flush();
-			int x;
+			int x;			
 			for(int i=0; i <100000; i++) {
 				for(int j=0; j<100000; j++) {
 					 x = i + j;

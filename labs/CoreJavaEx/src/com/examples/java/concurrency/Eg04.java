@@ -7,6 +7,7 @@ package com.examples.java.concurrency;
  */
 public class Eg04 {
 	public static void main(String[] args) {
+		System.out.println(Thread.currentThread().getName() + " -->Start Running thread");		
 		Runnable r = new Runnable() {
 			@Override
 			public void run() {
@@ -23,10 +24,10 @@ public class Eg04 {
 		Thread t = new Thread(r);
 		t.start();
 		try {
-			t.join();
+			t.join();	// underlying thread should wait until this thread terminates
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		System.out.println(Thread.currentThread().getName());
+		System.out.println(Thread.currentThread().getName() + " -->Stop thread");
 	}
 }
