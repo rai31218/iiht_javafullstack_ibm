@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.Month;
+import java.time.format.DateTimeFormatter;
 
 public class LocalDateTimeEx {
 
@@ -41,6 +42,10 @@ public class LocalDateTimeEx {
       //parse a string
       LocalTime date5 = LocalTime.parse("20:15:30");
       System.out.println("date5: " + date5);
+            
+      //date formatter example
+      DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy hh:mm:ss");
+      System.out.println(LocalDateTime.parse("20/08/1996 10:24:45", formatter));
       
    }
 }
